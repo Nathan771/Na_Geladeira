@@ -1,0 +1,36 @@
+# Ambiente virtual Python
+
+venv/
+env/
+.env
+
+# Arquivos de configurações
+
+.env
+config.py
+*.key
+
+# Banco
+
+*.db
+*.sqlite3
+
+# Cache do Python
+
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+
+.vscode/
+.idea/
+*.swp
+
+# Docker (por enquanto)
+
+docker-compose.override.yml
+
+# log
+
+*.log
