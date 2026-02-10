@@ -14,4 +14,13 @@ def home():
 def buscar_receitas():
     ingrediente = request.form.get('ingrediente')
 
-    url = f'https://www.themealdv.com/api/json/v1/1/filter.php?i={ingrediente}'
+    url = f'https://www.themealdb.com/api/json/v1/1/filter.php?i={ingrediente}'
+    response = requests.get(url)
+    return response.json()
+
+
+
+
+
+if __name__ == "__main__":
+    app.run(debug = True)
