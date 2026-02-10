@@ -19,6 +19,8 @@ def buscar_receitas():
     return response.json()
 
 
+    receitas = data.get('meals', [])
+
 
 
 

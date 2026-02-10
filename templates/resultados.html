@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que achamos? </title>
+</head>
+<body>
+    <h1> Receitas com {{ingrediente}}</h1>
+
+    {% if receitas %}
+        <div class = "receitas">
+            {% for receita in receitas %}
+                <div class = "card">
+                    <img src = "{{receita.strMealThumb}}" alt = "{{receita.strMeal}}">
+                    <h3> {{receita.strMeal}} </h3>
+                    <p>ID: {{receita.idMeal}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p> Nenhuma receita encontrada com esse ingrediente. </p>
+    {% endif %}
+
+    <a href = "/"> Voltar para a busca</a>
+</body>
+</html>
